@@ -9,7 +9,7 @@ var service = {
                     var a = 'S/. ';
                     var b = ' Soles';
                     var total = (args.precio) * (args.cant);
-
+                    console.log(total);
                     return {
                         precioTotal: `${a} ${total} ${b}`,
 
