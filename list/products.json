@@ -1,0 +1,44 @@
+[
+    {
+        "id":"001935",
+        "nombre":"Snack",
+        "precio":"2.00",
+        "imagen":"https://www.flaticon.com/svg/vstatic/svg/859/859293.svg?token=exp=1618786445~hmac=88b25e83398509736c76944db6619abb"
+    },
+    {
+        "id":"001850",
+        "nombre":"Gaseosa",
+        "precio":"3.50",
+        "imagen":"https://www.flaticon.com/svg/vstatic/svg/2722/2722527.svg?token=exp=1618787023~hmac=84edc873dd9a34a7a59cdda566acf811"
+    },
+    {
+        "id":"005624",
+        "nombre":"Leche",
+        "precio":"5.40",
+        "imagen":"https://www.flaticon.com/svg/vstatic/svg/372/372973.svg?token=exp=1618787163~hmac=d728114bc637b79a72cf6871d29e3fdb"
+    },
+    {
+        "id":"002580",
+        "nombre":"Yogurt",
+        "precio":"3.80",
+        "imagen":"https://www.flaticon.com/svg/vstatic/svg/3142/3142859.svg?token=exp=1618787237~hmac=8ca38b35d6d1fe7b87478a42fb6957d6"
+    },
+    {
+        "id":"004537",
+        "nombre":"Helado",
+        "precio":"5.00",
+        "imagen":"https://www.flaticon.com/svg/vstatic/svg/3157/3157358.svg?token=exp=1618787298~hmac=5538e312d51d4f0382747e3d6677e2ba"
+    },
+    {
+        "id":"009082",
+        "nombre":"Papel Higiénico",
+        "precio":"2.00",
+        "imagen":"https://www.flaticon.com/svg/vstatic/svg/4334/4334386.svg?token=exp=1618787442~hmac=6207d6b3995c5cd582397de168abbc78"
+    },
+    {
+        "id":"004601",
+        "nombre":"Shampoo",
+        "precio":"10.00",
+        "imagen":"https://www.flaticon.com/svg/vstatic/svg/3791/3791195.svg?token=exp=1618787532~hmac=c2839ab27b025364902ee0a1dcc7d976"
+    }
+]

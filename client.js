@@ -1,6 +1,6 @@
-var express = require('express');
-var soap = require('soap');
-var url = "http://localhost:3030/bmicalculator?wsdl";
+const express = require('express');
+const soap = require('soap');
+const url = "http://localhost:3030/bmicalculator?wsdl";
 var args = {
     precio: 80,
     cant: 180
