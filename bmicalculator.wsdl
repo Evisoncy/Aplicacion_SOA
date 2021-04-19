@@ -6,12 +6,13 @@
              xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <message name="getBMIRequest">
-        <part name="precio" type="xsd:float"/>
-        <part name="cant" type="xsd:float"/>
+        <part name="nombres" type="xsd:string"/>
+        <part name="correo" type="xsd:string"/>
+        <part name="fecha_nac" type="xsd:date"/>
     </message>
 
     <message name="getBMIResponse">
-        <part name="total" type="xsd:float"/>
+        <part name="saludo" type="xsd:string"/>
     </message>
 
     <portType name="Hello_PortType">

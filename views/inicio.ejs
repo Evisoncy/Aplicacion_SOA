@@ -12,74 +12,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
-    <title>Tienda PICMARK</title>
+    <title>SOA EXAMPLE</title>
 </head>
 
 <body>
 
     <div class="container">
         <div class="row">
-            <h1 class="text-center mx-auto my-4">Bienvenido a PICMARK</h1>
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header bg-dark text-white">
-                        <h5>Listado de Productos</h5>
-                    </div>
+            <div class="col-md-6 mx-auto">
+                <div class="card my-5">
                     <div class="card-body">
-
-                        <div class="row">
-                            <div class="card-columns">
-                                <% productos.forEach(prd => {  %>
-                                <div class="card p-2">
-                                    <img src="<%= prd.imagen %>" class="card-img-top" title="<%= prd.nombre %>"
-                                        alt="Producto">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><%= prd.nombre %></h5>
-                                        <p class="card-text">S/. <%= prd.precio %></p>
-                                        <a href="/add-carrito/<%= prd.id %>" class="btn btn-primary"
-                                            title="Agregar al Carrito" id="addcarrito"><i
-                                                class="fas fa-cart-plus"></i></a>
-                                    </div>
-                                </div>
-                                <% }) %>
+                        <h2 class="my-4 text-center">Formulario de Datos</h2>
+                        <form action="/validate" method="post">
+                            <div class="form-group">
+                                <input type="text" name="nombres" placeholder="Ingresa tu nombre" title="Nombres" id="nombres" class="form-control rounded" required autocomplete="off">
                             </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header bg-secondary">
-                        <h4>Carrito de Compras</h4>
-                    </div>
-                    <div class="card-body p-1">
-                        <% if(carrito){ %>
-                        <form action="/pagar" method="post">
-                            <ul class="list-group list-group-flus">
-                                <% carrito.forEach(cc => {  %>
-                                <li class="list-group-item d-flex align-items-center justify-content-between">
-                                    <%= cc.nombre %>
-                                    <input type="hidden" name="nombre" value="<%= cc.nombre %>">
-                                    <input type="number" name="cantidad" value="<%= cc.cantidad %>" id="cantidad"
-                                        min="0" class="form-control form-control-sm" style="width: 60px;">
-                                    <input type="hidden" name="precio" value="<%= cc.precio %>">
-                                    <a href="/remove-carrito/<%= cc.nombre %>" class="btn btn-danger btn-sm"><i
-                                            class="fas fa-times"></i></a>
-                                </li>
-                                <% }) %>
-                            </ul>
-                            <button type="submit" class="btn btn-success my-2 btn-block">Pagar</button>
+                            <div class="form-group">
+                                <input type="email" name="correo" placeholder="Ingresa tu correo electrónico" title="Correo Electrónico" id="correo" class="form-control rounded" required autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="fecha_nac" title="Fecha de Nacimiento" id="fecha_nac" class="form-control rounded" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Enviar</button>
                         </form>
-                        <% }else{  %>
-                        <p class="text-secondary text-center my-3">No hay productos en el carrito</p>
-                        <% } %>
-
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 

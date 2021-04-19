@@ -18,23 +18,35 @@ app.set('views', path.join(__dirname, 'views'))
 //Routes
 app.use('/', require('./routes/index'))
 
+function calculaEdad(fecha) {
+    let hoy = new Date()
+    let fechaNacimiento = new Date(fecha)
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear()
+    let calculaMeses = hoy.getMonth() - fechaNacimiento.getMonth()
+
+    if (calculaMeses < 0 || (calculaMeses === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+        edad--;
+    }
+
+    return edad;
+}
+
 var service = {
     BMI_Service: {
         BMI_Port: {
             calculateBMI: function (args) {
-                const { nombre, cantidad, precio } = args
-                let total = 0;
-                const a = 'S/. ';
-                console.log('args',args)
+                const { nombres, correo, fecha_nac } = args
 
-                console.log("***** COMPRA *****")
-
-                for (let i = 0; i < cantidad.length; i++) {
-                    total += parseFloat(precio[i]) * parseInt(cantidad[i])
-                }
+                let saludo = `
+                Hola ${nombres}. Bienvenido a SOATICK
+                Tienes ${calculaEdad(fecha_nac)} años
+                Tu Correo Electrónico es ${correo}
+                Saludos
+                Atte. SOATICK
+                `;
 
                 return {
-                    precioTotal: `${a} ${total}`,
+                    saludo: saludo
                 };
 
             }
